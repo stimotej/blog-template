@@ -29,6 +29,10 @@ const postSchema = mongoose.Schema({
                 type: mongoose.Schema.Types.ObjectId, 
                 ref: 'User'
             },
+            status: {
+                type: String,
+                default: 'Pending'
+            },
             date: {
                 type: Date,
                 default: Date.now()

@@ -1,9 +1,13 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const compression = require('compression')
 require('dotenv').config()
 
 const app = express()
 const port = 3000
+
+// Gzip compression
+app.use(compression())
 
 // Parse body to JSON
 app.use(express.urlencoded({ extended: true }));
